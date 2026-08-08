@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #080d18;
+  background-image: radial-gradient(60% 60% at 20% 0%, rgba(47, 168, 157, 0.14) 0%, rgba(8, 13, 24, 0) 60%),
+    radial-gradient(50% 50% at 100% 10%, rgba(201, 162, 75, 0.1) 0%, rgba(8, 13, 24, 0) 55%);
+  background-attachment: fixed;
+}
+
+::selection {
+  background: rgba(47, 168, 157, 0.35);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #233047;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2c3c58;
+}
+
+/* Visible keyboard focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #2fa89d;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.prose-genesis h1,
+.prose-genesis h2,
+.prose-genesis h3 {
+  font-family: "Fraunces", serif;
+  color: #edeff4;
+  font-weight: 600;
+}
+.prose-genesis h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.prose-genesis h2 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid #233047;
+}
+.prose-genesis h3 {
+  font-size: 1.15rem;
+  margin-top: 1.5rem;
+}
+.prose-genesis p {
+  color: #c3cad8;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+.prose-genesis a {
+  color: #3fc7b8;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.prose-genesis code {
+  background: #182338;
+  border: 1px solid #233047;
+  padding: 0.15rem 0.4rem;
+  border-radius: 6px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.85em;
+  color: #e4c06e;
+}
+.prose-genesis pre {
+  background: #0b1220;
+  border: 1px solid #233047;
+  padding: 1rem;
+  border-radius: 12px;
+  overflow-x: auto;
+  margin-bottom: 1.25rem;
+}
+.prose-genesis pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #c3cad8;
+}
+.prose-genesis ul,
+.prose-genesis ol {
+  color: #c3cad8;
+  margin: 0 0 1rem 1.25rem;
+}
+.prose-genesis li {
+  margin-bottom: 0.4rem;
+  line-height: 1.7;
+}
+.prose-genesis blockquote {
+  border-left: 3px solid #c9a24b;
+  padding-left: 1rem;
+  color: #8b97ac;
+  font-style: italic;
+  margin: 1rem 0;
+}
+.prose-genesis img {
+  border-radius: 14px;
+  border: 1px solid #233047;
+  margin: 1rem 0 0.5rem;
+}
+.prose-genesis table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.25rem;
+}
+.prose-genesis th,
+.prose-genesis td {
+  border: 1px solid #233047;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+.prose-genesis th {
+  background: #121b2e;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #8b97ac;
+}
