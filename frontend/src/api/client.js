@@ -1,4 +1,5 @@
 const TOKEN_KEY = "genesis_token";
+const API_BASE = import.meta.env.VITE_API_URL || "";
 
 export function getToken() {
   return localStorage.getItem(TOKEN_KEY);
@@ -12,7 +13,7 @@ export function setToken(token) {
 async function request(path, { method = "GET", body, headers = {} } = {}) {
   const token = getToken();
 
-  const res = await fetch(`/api${path}`, {
+  const res = await fetch(`${API_BASE}/api${path}`, {
     method,
     headers: {
       ...(body ? { "Content-Type": "application/json" } : {}),
@@ -81,6 +82,6 @@ export const api = {
 
   downloadFile,
 
-  downloadUrl: (id) => `/api/blogs/${id}/download.md`,
-  bundleUrl: (id) => `/api/blogs/${id}/bundle.zip`,
+  downloadUrl: (id) => `${API_BASE}/api/blogs/${id}/download.md`,
+  bundleUrl: (id) => `${API_BASE}/api/blogs/${id}/bundle.zip`,
 };
