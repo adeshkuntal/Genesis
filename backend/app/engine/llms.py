@@ -28,7 +28,7 @@ def get_research_llm():
 
 @lru_cache(maxsize=1)
 def get_planner_llm():
-    return ChatGroq(model="llama-3.3-70b-versatile", temperature=0)
+    return ChatGroq(model="openai/gpt-oss-120b", temperature=0)
 
 
 @lru_cache(maxsize=1)
@@ -40,10 +40,10 @@ def get_writer_llm():
 def get_concept_llm():
     """Used by the visuals pipeline's Concept Extractor stage - a fast,
     cheap model is fine since this is a narrow extraction task."""
-    return ChatGroq(model="llama-3.3-70b-versatile", temperature=0)
+    return ChatGroq(model="openai/gpt-oss-120b", temperature=0)
 
 
 @lru_cache(maxsize=1)
 def get_visual_planner_llm():
     """Used by the visuals pipeline's Visualization Planner stage."""
-    return ChatGroq(model="llama-3.3-70b-versatile", temperature=0)
+    return ChatGroq(model="openai/gpt-oss-120b", temperature=0)
