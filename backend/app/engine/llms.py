@@ -18,7 +18,7 @@ def get_llm():
 
 @lru_cache(maxsize=1)
 def get_router_llm():
-    return ChatGroq(model="llama-3.1-8b-instant", temperature=0)
+    return ChatGroq(model="openai/gpt-oss-120b", temperature=0)
 
 
 @lru_cache(maxsize=1)
